@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="header">
+  <app-img [img]="logoImgSrc"></app-img>
+  <div class="header__links">
+    <app-button
+      *ngFor="let link of headerLinks"
+      [text]="link.text"
+      [size]="Buttons.big"
+    ></app-button>
+  </div>
+  <app-button [text]="'Демо-версия'" [size]="Buttons.average"></app-button>
+</div>

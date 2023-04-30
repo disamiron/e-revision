@@ -12,6 +12,7 @@ export enum TextSizes {
   smallText = 'small-text',
   caption = 'caption',
   x100 = 'x-100',
+  menuItem = 'menu-item',
 }
 
 export enum ColorMap {

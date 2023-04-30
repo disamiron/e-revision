@@ -6,6 +6,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { MaterialModule } from './material/material.module';
+import { ImgComponent } from './components/img/img.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { MaterialModule } from './material/material.module';
     MainComponent,
     TextComponent,
     ButtonComponent,
+    ImgComponent,
   ],
   imports: [CommonModule, MaterialModule],
   exports: [
@@ -23,6 +25,7 @@ import { MaterialModule } from './material/material.module';
     MainComponent,
     TextComponent,
     ButtonComponent,
+    ImgComponent,
   ],
 })
 export class SharedModule {}
