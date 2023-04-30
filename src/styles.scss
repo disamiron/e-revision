@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+
+// $stadio-frontend-primary: mat.define-palette(mat.$grey-palette);
+// $stadio-frontend-accent: mat.define-palette(mat.$grey-palette);
+// $stadio-frontend-warn: mat.define-palette(mat.$red-palette);
+
+// $stadio-frontend-theme: mat.define-dark-theme(
+//   (
+//     color: (
+//       primary: $stadio-frontend-primary,
+//       accent: $stadio-frontend-accent,
+//       warn: $stadio-frontend-warn,
+//     ),
+//   )
+// );
+
+// @include mat.all-component-themes($stadio-frontend-theme);
+
+@import "./styles/variables";
+@import "./styles/fonts";
+
+body {
+  font-family: "Inter", sans-serif;
+}

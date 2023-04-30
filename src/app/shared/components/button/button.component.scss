@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/fonts";
+
+.button {
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-big {
+  min-height: 40px;
+  padding: 0 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--light-black) !important;
+}
+
+.button-big:hover {
+  color: #3185fc !important;
+  background-color: rgba(49, 133, 252, 0.08);
+}
+
+.button-average {
+  min-height: 52px;
+  padding: 0 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--white) !important;
+  background-color: #3185fc;
+}
+
+.button-average:hover {
+  background-color: #0f72ff;
+}
