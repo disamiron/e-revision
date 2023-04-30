@@ -1,7 +1,9 @@
 :host {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  display: block;
+  max-width: 1440px;
 }
+
 .block {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@
 }
 
 .big-text {
-  @extend .weight-500, .font-32-44;
+  @extend .weight-500, .font-32-44-big;
 }
 
 .parapgraph {
@@ -64,6 +64,11 @@
   line-height: 44px;
 }
 
+.font-32-44-big {
+  font-size: 32px;
+  line-height: 44px;
+}
+
 .font-20-28 {
   font-size: 20px;
   line-height: 28px;
@@ -88,4 +93,47 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 400px) {
+  .font-44-56 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .font-32-44 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .font-32-44-big {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .font-20-28 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .font-20-32 {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .font-16-24 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .font-14-16 {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .font-14-16-ls {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
 }
