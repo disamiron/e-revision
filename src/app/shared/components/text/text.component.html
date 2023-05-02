@@ -1,7 +1,10 @@
 <div
   class="{{ textSize }}"
   [class.uppercase]="uppercase"
-  [ngStyle]="{ color: color }"
+  [ngStyle]="{
+    color: color,
+    opacity: opacity
+  }"
 >
   {{ text }}
 </div>

@@ -14,4 +14,6 @@ export class TextComponent {
   @Input() color: string = ColorMap.black;
 
   @Input() uppercase: boolean = false;
+
+  @Input() opacity: number = 1;
 }

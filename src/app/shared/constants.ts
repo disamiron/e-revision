@@ -20,3 +20,10 @@ export const headerLinks = [
     text: 'Отзывы',
   },
 ];
+
+export const footerTexts = {
+  demoVersion: 'Демо-версия',
+  tryOurProductToday: 'Попробуйте наш продукт уже сегодня!',
+  fillOutTheContactForm:
+    'Заполните контактную форму, чтобы получить доступ к демо-версии продукта. Не упустите возможность улучшить свой бизнес!',
+};

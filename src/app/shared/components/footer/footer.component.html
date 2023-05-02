@@ -1,1 +1,90 @@
-<p>footer works!</p>
+<div class="footer">
+  <div class="footer__main">
+    <div class="left-block">
+      <app-text
+        [text]="footerTexts.demoVersion"
+        [textSize]="TextSizes.caption"
+        [color]="ColorMap.white"
+        [opacity]="0.5"
+      ></app-text>
+      <app-text
+        [text]="footerTexts.tryOurProductToday"
+        [textSize]="TextSizes.headline2"
+        [color]="ColorMap.white"
+      ></app-text>
+      <app-text
+        [text]="footerTexts.fillOutTheContactForm"
+        [textSize]="TextSizes.smallText"
+        [color]="ColorMap.white"
+        [opacity]="0.6"
+      ></app-text>
+    </div>
+    <div class="right-block">
+      <form [formGroup]="feedbackForm" class="form">
+        <div class="main_values">
+          <mat-form-field appearance="outline">
+            <!-- <mat-label>Имя</mat-label> -->
+            <input formControlName="name" matInput placeholder="Имя" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <!-- <mat-label>Email</mat-label> -->
+            <input formControlName="email" matInput placeholder="Email" />
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" class="textarea">
+          <!-- <mat-label>Сообщение (не обязательно)</mat-label> -->
+          <textarea
+            formControlName="message"
+            matInput
+            placeholder="Сообщение (не обязательно)"
+          ></textarea>
+        </mat-form-field>
+        <mat-checkbox formControlName="privacyPolicy" color="primary"
+          ><app-text
+            [text]="'Я соглашаюсь с условиями политики конфиденциальности'"
+            [textSize]="TextSizes.smallText"
+            [color]="ColorMap.white"
+            autocomplete="off"
+            [opacity]="0.6"
+          ></app-text
+        ></mat-checkbox>
+        <app-button
+          [text]="'Получить доступ'"
+          [size]="Buttons.average"
+        ></app-button>
+      </form>
+    </div>
+  </div>
+  <div class="footer__extra">
+    <app-text
+      [text]="'e-revision@gmail.com'"
+      [textSize]="TextSizes.menuItem"
+      [color]="ColorMap.white"
+      autocomplete="off"
+      [opacity]="0.6"
+    ></app-text>
+    <app-text
+      [text]="'© 2023 E-Revision. Все права защищены.'"
+      [textSize]="TextSizes.menuItem"
+      [color]="ColorMap.white"
+      autocomplete="off"
+      [opacity]="0.6"
+    ></app-text>
+    <div class="links">
+      <app-text
+        [text]="'inst'"
+        [textSize]="TextSizes.menuItem"
+        [color]="ColorMap.white"
+        autocomplete="off"
+        [opacity]="0.6"
+      ></app-text>
+      <app-text
+        [text]="'fb'"
+        [textSize]="TextSizes.menuItem"
+        [color]="ColorMap.white"
+        autocomplete="off"
+        [opacity]="0.6"
+      ></app-text>
+    </div>
+  </div>
+</div>

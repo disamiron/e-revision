@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { KitPageComponent } from './pages/kit-page/kit-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent, KitPageComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
