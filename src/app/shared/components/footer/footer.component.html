@@ -23,16 +23,13 @@
       <form [formGroup]="feedbackForm" class="form">
         <div class="main_values">
           <mat-form-field appearance="outline">
-            <!-- <mat-label>Имя</mat-label> -->
             <input formControlName="name" matInput placeholder="Имя" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <!-- <mat-label>Email</mat-label> -->
             <input formControlName="email" matInput placeholder="Email" />
           </mat-form-field>
         </div>
         <mat-form-field appearance="outline" class="textarea">
-          <!-- <mat-label>Сообщение (не обязательно)</mat-label> -->
           <textarea
             formControlName="message"
             matInput
@@ -41,7 +38,7 @@
         </mat-form-field>
         <mat-checkbox formControlName="privacyPolicy" color="primary"
           ><app-text
-            [text]="'Я соглашаюсь с условиями политики конфиденциальности'"
+            [text]="footerTexts.privacyPolicy"
             [textSize]="TextSizes.smallText"
             [color]="ColorMap.white"
             autocomplete="off"
@@ -49,7 +46,7 @@
           ></app-text
         ></mat-checkbox>
         <app-button
-          [text]="'Получить доступ'"
+          [text]="footerTexts.getAccess"
           [size]="Buttons.average"
         ></app-button>
       </form>
@@ -57,14 +54,14 @@
   </div>
   <div class="footer__extra">
     <app-text
-      [text]="'e-revision@gmail.com'"
+      [text]="footerTexts.revisionMail"
       [textSize]="TextSizes.menuItem"
       [color]="ColorMap.white"
       autocomplete="off"
       [opacity]="0.6"
     ></app-text>
     <app-text
-      [text]="'© 2023 E-Revision. Все права защищены.'"
+      [text]="footerTexts.rights"
       [textSize]="TextSizes.menuItem"
       [color]="ColorMap.white"
       autocomplete="off"

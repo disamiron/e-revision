@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { MaterialModule } from './material/material.module';
 import { ImgComponent } from './components/img/img.component';
+import { AboutComponent } from './components/about/about.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { WhyOurAppComponent } from './components/why-our-app/why-our-app.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ImgComponent } from './components/img/img.component';
     TextComponent,
     ButtonComponent,
     ImgComponent,
+    AboutComponent,
+    HowItWorksComponent,
+    WhyOurAppComponent,
   ],
   imports: [CommonModule, MaterialModule],
   exports: [
@@ -26,6 +32,9 @@ import { ImgComponent } from './components/img/img.component';
     TextComponent,
     ButtonComponent,
     ImgComponent,
+    AboutComponent,
+    HowItWorksComponent,
+    WhyOurAppComponent,
   ],
 })
 export class SharedModule {}
