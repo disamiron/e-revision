@@ -48,18 +48,21 @@
         <app-button
           [text]="footerTexts.getAccess"
           [size]="Buttons.average"
+          [isDisabled]="feedbackForm.invalid"
         ></app-button>
       </form>
     </div>
   </div>
   <div class="footer__extra">
-    <app-text
-      [text]="footerTexts.revisionMail"
-      [textSize]="TextSizes.menuItem"
-      [color]="ColorMap.white"
-      autocomplete="off"
-      [opacity]="0.6"
-    ></app-text>
+    <a [href]="'mailto:' + footerTexts.revisionMail" target="_blank">
+      <app-text
+        [text]="footerTexts.revisionMail"
+        [textSize]="TextSizes.menuItem"
+        [color]="ColorMap.white"
+        autocomplete="off"
+        [opacity]="0.6"
+      ></app-text
+    ></a>
     <app-text
       [text]="footerTexts.rights"
       [textSize]="TextSizes.menuItem"
@@ -68,20 +71,15 @@
       [opacity]="0.6"
     ></app-text>
     <div class="links">
-      <app-text
-        [text]="'inst'"
-        [textSize]="TextSizes.menuItem"
-        [color]="ColorMap.white"
-        autocomplete="off"
-        [opacity]="0.6"
-      ></app-text>
-      <app-text
-        [text]="'fb'"
-        [textSize]="TextSizes.menuItem"
-        [color]="ColorMap.white"
-        autocomplete="off"
-        [opacity]="0.6"
-      ></app-text>
+      <a href="https://t.me/nozikov" target="_blank">
+        <app-text
+          [text]="'Telegram'"
+          [textSize]="TextSizes.menuItem"
+          [color]="ColorMap.white"
+          autocomplete="off"
+          [opacity]="0.6"
+        ></app-text
+      ></a>
     </div>
   </div>
 </div>

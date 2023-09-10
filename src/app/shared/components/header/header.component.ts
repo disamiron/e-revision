@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { headerLinks, logoImgSrc } from '../../constants';
-import { Buttons } from '../../enums';
+import { Buttons, ColorMap, TextSizes } from '../../enums';
 
 @Component({
   selector: 'app-header',
@@ -13,4 +13,10 @@ export class HeaderComponent {
   public headerLinks = headerLinks;
 
   public Buttons = Buttons;
+
+  public isMenuOpen: boolean = false;
+
+  public TextSizes = TextSizes;
+
+  public ColorMap = ColorMap;
 }

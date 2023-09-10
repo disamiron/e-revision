@@ -2,20 +2,22 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Input,
   OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { howItWorksArray } from '../../constants';
 import { ColorMap, TextSizes } from '../../enums';
+import { reviewsTexts, userReviewsArray } from '../../constants';
+import { UserReview } from '../../interfaces';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
 @Component({
-  selector: 'app-how-it-works',
-  templateUrl: './how-it-works.component.html',
-  styleUrls: ['./how-it-works.component.scss'],
+  selector: 'app-reviews',
+  templateUrl: './reviews.component.html',
+  styleUrls: ['./reviews.component.scss'],
 })
-export class HowItWorksComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('sliderImgRef') public sliderImgRef:
+export class ReviewsComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('sliderPreviewRef') public sliderPreviewRef:
     | ElementRef<HTMLElement>
     | undefined;
 
@@ -23,16 +25,17 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   public slider: KeenSliderInstance | null = null;
 
+  public userReviewsArray: UserReview[] = userReviewsArray;
+
   public readonly TextSizes = TextSizes;
 
   public readonly ColorMap = ColorMap;
 
-  public readonly howItWorksArray: { img: string; title: string }[] =
-    howItWorksArray;
+  public reviewsTexts = reviewsTexts;
 
   public ngAfterViewInit() {
-    if (this.sliderImgRef && this.sliderImgRef?.nativeElement) {
-      this.slider = new KeenSlider(this.sliderImgRef?.nativeElement, {
+    if (this.sliderPreviewRef && this.sliderPreviewRef?.nativeElement) {
+      this.slider = new KeenSlider(this.sliderPreviewRef?.nativeElement, {
         slideChanged: (s) => {
           this.currentSlide = s.track.details.rel;
         },

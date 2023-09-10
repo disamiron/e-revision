@@ -10,6 +10,7 @@
   justify-content: space-around;
   flex-direction: column;
   max-width: 1240px;
+  margin: 0 20px;
   width: 100%;
   &__main {
     display: flex;
@@ -78,17 +79,52 @@
   }
 }
 
-::ng-deep .mat-focused .mat-form-field-label {
-  /*change color of label*/
-  color: green !important;
+@media (max-width: 900px) {
+  .footer {
+    &__main {
+      flex-direction: column;
+      margin: 40px 0;
+      .left-block {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .right-block {
+        width: 100%;
+      }
+    }
+  }
 }
 
-::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: green !important;
+@media (max-width: 700px) {
+  .footer {
+    &__extra {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 0;
+      gap: 15px;
+
+      .links {
+        gap: 20px;
+      }
+    }
+  }
 }
 
-::ng-deep.mat-form-field-ripple {
-  /*change color of underline when focused*/
-  background-color: green !important;
+@media (max-width: 600px) {
+  .footer {
+    .right-block {
+      .form {
+        .main_values {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        app-button {
+          ::ng-deep button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

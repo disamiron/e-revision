@@ -1,3 +1,5 @@
+import { UserReview } from './interfaces';
+
 export const eRevisionValues = {
   kit: 'kit',
 };
@@ -9,15 +11,19 @@ export const logoImgSrc = '/assets/svg/logo.svg';
 export const headerLinks = [
   {
     text: 'О приложении',
+    code: 'about',
   },
   {
     text: 'Как это работает',
+    code: 'how-it-works',
   },
   {
     text: 'Преимущества',
+    code: 'advantages',
   },
   {
     text: 'Отзывы',
+    code: 'reviews',
   },
 ];
 
@@ -76,6 +82,79 @@ export const footerTexts = {
     'Заполните контактную форму, чтобы получить доступ к демо-версии продукта. Не упустите возможность улучшить свой бизнес!',
   privacyPolicy: 'Я соглашаюсь с условиями политики конфиденциальности',
   getAccess: 'Получить доступ',
-  revisionMail: 'e-revision@gmail.com',
+  revisionMail: 'info@e-revision.ru',
   rights: '© 2023 E-Revision. Все права защищены.',
 };
+
+export const howItWorksArray = [
+  {
+    img: '/assets/svg/how-it-works_1.svg',
+    title:
+      'Выбор магазина из списка заранее заведенных магазинов для проведения ревизии',
+  },
+  {
+    img: '/assets/svg/how-it-works_2.svg',
+    title:
+      'Загрузка файла с бухгалтерским остатком товаров для сравнения с реальными данными.',
+  },
+  {
+    img: '/assets/svg/how-it-works_3.svg',
+    title:
+      'Ревизия товаров с помощью камеры телефона или ввода штрихкода и локального кода вручную.',
+  },
+  {
+    img: '/assets/svg/how-it-works_5.svg',
+    title: 'Ввод количества отсканированного товара.',
+    // title:
+    //   'Отслеживание истории сканирования товаров с информацией о времени, количестве и ответственном сотруднике.',
+  },
+  {
+    img: '/assets/svg/how-it-works_4.svg',
+    title:
+      'Поиск и фильтрация по отсканированным товарам для быстрой оценки текущих запасов.',
+  },
+  {
+    img: '/assets/svg/how-it-works_6.svg',
+    title:
+      'Получение файла с результатами ревизии, готового к выгрузке в 1С для дальнейшей работы с данными.',
+  },
+];
+
+export const advantagesTexts = {
+  head: 'Попробуйте сейчас',
+  title: 'Оцените преимущества на практике',
+  subtitle:
+    'Попробуйте демо-версию нашего приложения и убедитесь, насколько легко и быстро можно проводить инвентаризацию в магазине',
+  buttonText: 'Демо версия',
+};
+
+export const advantagesMobileImgSrc = '/assets/svg/advantages-phone.svg';
+
+export const reviewsTexts = {
+  head: 'ОТЗЫВЫ',
+  title: 'Что говорят о продукте клиенты',
+};
+
+export const userReviewsArray: UserReview[] = [
+  {
+    userLogo: '/assets/svg/user-logo_1.svg',
+    userName: 'Иван Федоров',
+    userPosition: 'Владелец магазина Fix Price в г. Коряжма',
+    reviewText:
+      'Никогда не думал, что инвентаризация может быть такой легкой! С помощью этого приложения я смог провести ее в нашем магазине всего за несколько часов.',
+  },
+  {
+    userLogo: '/assets/svg/user-logo_2.svg',
+    userName: 'Василий Иванов',
+    userPosition: 'Владелец магазина Fix Price в г. Москва',
+    reviewText:
+      'Я просто в восторге от этого приложения! Оно позволяет провести инвентаризацию магазина быстро и точно, что дает мне больше времени для других задач.',
+  },
+  {
+    userLogo: '/assets/svg/user-logo_3.svg',
+    userName: 'Мария Кузнецова',
+    userPosition: 'Владелец магазина Fix Price в г. Санкт-Петербург',
+    reviewText:
+      'Супер-удобное приложение! Оно существенно ускорило процесс инвентаризации и сделало его гораздо менее трудоемким. ',
+  },
+];

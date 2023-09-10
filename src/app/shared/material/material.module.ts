@@ -12,6 +12,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 // import { MatDialogModule } from '@angular/material/dialog';
 // import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   imports: [
@@ -24,6 +27,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     MatInputModule,
     MatCheckboxModule,
+    MatListModule,
+    MatIconModule,
+    MatSidenavModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -35,6 +41,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
     MatInputModule,
     MatCheckboxModule,
+    MatListModule,
+    MatIconModule,
+    MatSidenavModule,
   ],
   providers: [],
 })

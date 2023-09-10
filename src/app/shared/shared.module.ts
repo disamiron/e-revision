@@ -10,6 +10,10 @@ import { ImgComponent } from './components/img/img.component';
 import { AboutComponent } from './components/about/about.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 import { WhyOurAppComponent } from './components/why-our-app/why-our-app.component';
+import { AdvantagesComponent } from './components/advantages/advantages.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { CircleButtonComponent } from './components/circle-button/circle-button.component';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { WhyOurAppComponent } from './components/why-our-app/why-our-app.compone
     AboutComponent,
     HowItWorksComponent,
     WhyOurAppComponent,
+    AdvantagesComponent,
+    ReviewsComponent,
+    CircleButtonComponent,
+    ReviewCardComponent,
   ],
   imports: [CommonModule, MaterialModule],
   exports: [
@@ -35,6 +43,10 @@ import { WhyOurAppComponent } from './components/why-our-app/why-our-app.compone
     AboutComponent,
     HowItWorksComponent,
     WhyOurAppComponent,
+    AdvantagesComponent,
+    ReviewsComponent,
+    CircleButtonComponent,
+    ReviewCardComponent,
   ],
 })
 export class SharedModule {}

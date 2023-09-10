@@ -1,11 +1,43 @@
 <div class="header">
-  <app-img [img]="logoImgSrc"></app-img>
+  <a href="#main"><app-img [img]="logoImgSrc"></app-img></a>
   <div class="header__links">
-    <app-button
-      *ngFor="let link of headerLinks"
-      [text]="link.text"
-      [size]="Buttons.big"
-    ></app-button>
+    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
+      <app-button [text]="link.text" [size]="Buttons.big"></app-button>
+    </a>
   </div>
-  <app-button [text]="'Демо версия'" [size]="Buttons.average"></app-button>
+  <div class="header__menu">
+    <a href="#demo" class="demo-button">
+      <app-button [text]="'Демо версия'" [size]="Buttons.average"></app-button>
+    </a>
+    <app-circle-button
+      class="menu-button"
+      [img]="isMenuOpen ? 'close' : 'menu'"
+      [isMenuButton]="true"
+      (click)="drawer.toggle()"
+    ></app-circle-button>
+  </div>
 </div>
+
+<mat-drawer #drawer class="drawer-sidenav" mode="side">
+  <div class="tablet-menu">
+    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
+      <app-text
+        [text]="link.text"
+        [textSize]="TextSizes.headline1"
+        (click)="drawer.toggle()"
+      ></app-text>
+    </a>
+  </div>
+  <div class="mobile-menu">
+    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
+      <app-text
+        [text]="link.text"
+        [textSize]="TextSizes.headline2"
+        (click)="drawer.toggle()"
+      ></app-text>
+    </a>
+    <a href="#demo" class="demo-button" (click)="drawer.toggle()">
+      <app-button [text]="'Демо версия'" [size]="Buttons.average"></app-button>
+    </a>
+  </div>
+</mat-drawer>

@@ -13,5 +13,7 @@ export class ButtonComponent {
 
   @Input() isDisabled: boolean = false;
 
+  @Input() reverseColor: boolean = false;
+
   public TextSizes = TextSizes;
 }

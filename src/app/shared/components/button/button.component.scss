@@ -5,10 +5,12 @@
   border-radius: 10px;
   display: inline-block;
   text-align: center;
+  font-family: "Inter", sans-serif !important;
 }
 
 ::ng-deep span {
   white-space: nowrap;
+  font-family: "Inter", sans-serif !important;
 }
 
 .button-big {
@@ -27,7 +29,7 @@
 }
 
 .button-average {
-  min-height: 52px;
+  min-height: 44px;
   padding: 0 24px;
   font-style: normal;
   font-weight: 600;
@@ -39,4 +41,13 @@
 
 .button-average:hover {
   background-color: #0f72ff;
+}
+
+.reverse {
+  color: var(--blue) !important;
+  background-color: var(--white) !important;
+}
+
+.disabled {
+  background-color: #5ba0ff !important;
 }

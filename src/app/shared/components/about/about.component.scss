@@ -6,8 +6,12 @@
 }
 .about {
   max-width: 1240px;
+  margin: 50px 20px 60px;
   display: flex;
-  height: 408px;
   flex-direction: column;
   justify-content: center;
+
+  &__title {
+    margin-bottom: 10px;
+  }
 }

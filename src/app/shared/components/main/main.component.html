@@ -8,13 +8,16 @@
       [text]="mainTexts.demoText2"
       [textSize]="TextSizes.parapgraph"
     ></app-text>
-    <app-button
-      [text]="mainTexts.demoTextBtn"
-      [size]="Buttons.average"
-    ></app-button>
+    <a href="#demo">
+      <app-button
+        [text]="mainTexts.demoTextBtn"
+        [size]="Buttons.average"
+      ></app-button
+    ></a>
   </div>
   <div class="demo__logo">
     <app-img [img]="demoMobileImgSrc"></app-img>
+    <div class="background"></div>
   </div>
 </div>
 <div class="numbers">

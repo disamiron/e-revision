@@ -1,1 +1,41 @@
-<p>how-it-works works!</p>
+<div class="how-it-works">
+  <div class="how-it-works__logo">
+    <div class="keen-slider keen-slider--vertical custom" #sliderImgRef>
+      <app-img
+        *ngFor="let howItWork of howItWorksArray; index as index"
+        [class]="'keen-slider__slide img number-slide' + index"
+        [img]="howItWork.img"
+      >
+      </app-img>
+    </div>
+  </div>
+  <div class="how-it-works__list">
+    <app-text
+      class="title"
+      [text]="'КАК ЭТО РАБОТАЕТ'"
+      [color]="ColorMap.blue"
+      [textSize]="TextSizes.caption"
+    ></app-text>
+
+    <div class="container">
+      <ng-container
+        *ngFor="let howItWork of howItWorksArray; last as last; index as i"
+      >
+        <div class="item">
+          <div class="circle" [class.active]="currentSlide >= i"></div>
+          <div>
+            <app-text
+              [text]="howItWork.title"
+              [textSize]="TextSizes.smallText"
+              class="target"
+              (click)="slider?.moveToIdx(i)"
+            ></app-text>
+            <div class="separator" *ngIf="!last"></div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div class="background"></div>
