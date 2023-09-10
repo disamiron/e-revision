@@ -6,7 +6,7 @@ export const eRevisionValues = {
 
 export const appName = 'E-revision';
 
-export const logoImgSrc = '/assets/svg/logo.svg';
+export const logoImgSrc = 'assets/svg/logo.svg';
 
 export const headerLinks = [
   {
@@ -55,25 +55,25 @@ export const numberTexts = [
 
 export const whyTexts = [
   {
-    img: '/assets/svg/alarm.svg',
+    img: 'assets/svg/alarm.svg',
     description: 'Скорость и точность проведения ревизии',
   },
   {
-    img: '/assets/svg/phone.svg',
+    img: 'assets/svg/phone.svg',
     description: 'Удобство использования и интуитивно понятный интерфейс',
   },
   {
-    img: '/assets/svg/check.svg',
+    img: 'assets/svg/check.svg',
     description:
       'Гибкая адаптация. Адаптируем E-Revision под любой формат файла по запросу.',
   },
   {
-    img: '/assets/svg/money.svg',
+    img: 'assets/svg/money.svg',
     description: 'Экономия времени и ресурсов предпринимателей',
   },
 ];
 
-export const demoMobileImgSrc = '/assets/svg/demo-mobile.svg';
+export const demoMobileImgSrc = 'assets/svg/demo-mobile.svg';
 
 export const footerTexts = {
   demoVersion: 'Демо-версия',
@@ -88,33 +88,33 @@ export const footerTexts = {
 
 export const howItWorksArray = [
   {
-    img: '/assets/svg/how-it-works_1.svg',
+    img: 'assets/svg/how-it-works_1.svg',
     title:
       'Выбор магазина из списка заранее заведенных магазинов для проведения ревизии',
   },
   {
-    img: '/assets/svg/how-it-works_2.svg',
+    img: 'assets/svg/how-it-works_2.svg',
     title:
       'Загрузка файла с бухгалтерским остатком товаров для сравнения с реальными данными.',
   },
   {
-    img: '/assets/svg/how-it-works_3.svg',
+    img: 'assets/svg/how-it-works_3.svg',
     title:
       'Ревизия товаров с помощью камеры телефона или ввода штрихкода и локального кода вручную.',
   },
   {
-    img: '/assets/svg/how-it-works_5.svg',
+    img: 'assets/svg/how-it-works_5.svg',
     title: 'Ввод количества отсканированного товара.',
     // title:
     //   'Отслеживание истории сканирования товаров с информацией о времени, количестве и ответственном сотруднике.',
   },
   {
-    img: '/assets/svg/how-it-works_4.svg',
+    img: 'assets/svg/how-it-works_4.svg',
     title:
       'Поиск и фильтрация по отсканированным товарам для быстрой оценки текущих запасов.',
   },
   {
-    img: '/assets/svg/how-it-works_6.svg',
+    img: 'assets/svg/how-it-works_6.svg',
     title:
       'Получение файла с результатами ревизии, готового к выгрузке в 1С для дальнейшей работы с данными.',
   },
@@ -128,7 +128,7 @@ export const advantagesTexts = {
   buttonText: 'Демо версия',
 };
 
-export const advantagesMobileImgSrc = '/assets/svg/advantages-phone.svg';
+export const advantagesMobileImgSrc = 'assets/svg/advantages-phone.svg';
 
 export const reviewsTexts = {
   head: 'ОТЗЫВЫ',
@@ -137,21 +137,21 @@ export const reviewsTexts = {
 
 export const userReviewsArray: UserReview[] = [
   {
-    userLogo: '/assets/svg/user-logo_1.svg',
+    userLogo: 'assets/svg/user-logo_1.svg',
     userName: 'Иван Федоров',
     userPosition: 'Владелец магазина Fix Price в г. Коряжма',
     reviewText:
       'Никогда не думал, что инвентаризация может быть такой легкой! С помощью этого приложения я смог провести ее в нашем магазине всего за несколько часов.',
   },
   {
-    userLogo: '/assets/svg/user-logo_2.svg',
+    userLogo: 'assets/svg/user-logo_2.svg',
     userName: 'Василий Иванов',
     userPosition: 'Владелец магазина Fix Price в г. Москва',
     reviewText:
       'Я просто в восторге от этого приложения! Оно позволяет провести инвентаризацию магазина быстро и точно, что дает мне больше времени для других задач.',
   },
   {
-    userLogo: '/assets/svg/user-logo_3.svg',
+    userLogo: 'assets/svg/user-logo_3.svg',
     userName: 'Мария Кузнецова',
     userPosition: 'Владелец магазина Fix Price в г. Санкт-Петербург',
     reviewText:
