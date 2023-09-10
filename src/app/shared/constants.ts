@@ -73,7 +73,7 @@ export const whyTexts = [
   },
 ];
 
-export const demoMobileImgSrc = 'assets/svg/demo-mobile.svg';
+export const demoMobileImgSrc = 'assets/svg/demo-mobile.png';
 
 export const footerTexts = {
   demoVersion: 'Демо-версия',
@@ -88,33 +88,33 @@ export const footerTexts = {
 
 export const howItWorksArray = [
   {
-    img: 'assets/svg/how-it-works_1.svg',
+    img: 'assets/svg/how-it-works_1.png',
     title:
       'Выбор магазина из списка заранее заведенных магазинов для проведения ревизии',
   },
   {
-    img: 'assets/svg/how-it-works_2.svg',
+    img: 'assets/svg/how-it-works_2.png',
     title:
       'Загрузка файла с бухгалтерским остатком товаров для сравнения с реальными данными.',
   },
   {
-    img: 'assets/svg/how-it-works_3.svg',
+    img: 'assets/svg/how-it-works_3.png',
     title:
       'Ревизия товаров с помощью камеры телефона или ввода штрихкода и локального кода вручную.',
   },
   {
-    img: 'assets/svg/how-it-works_5.svg',
+    img: 'assets/svg/how-it-works_5.png',
     title: 'Ввод количества отсканированного товара.',
     // title:
     //   'Отслеживание истории сканирования товаров с информацией о времени, количестве и ответственном сотруднике.',
   },
   {
-    img: 'assets/svg/how-it-works_4.svg',
+    img: 'assets/svg/how-it-works_4.png',
     title:
       'Поиск и фильтрация по отсканированным товарам для быстрой оценки текущих запасов.',
   },
   {
-    img: 'assets/svg/how-it-works_6.svg',
+    img: 'assets/svg/how-it-works_6.png',
     title:
       'Получение файла с результатами ревизии, готового к выгрузке в 1С для дальнейшей работы с данными.',
   },
@@ -128,7 +128,7 @@ export const advantagesTexts = {
   buttonText: 'Демо версия',
 };
 
-export const advantagesMobileImgSrc = 'assets/svg/advantages-phone.svg';
+export const advantagesMobileImgSrc = 'assets/svg/advantages-phone.png';
 
 export const reviewsTexts = {
   head: 'ОТЗЫВЫ',
