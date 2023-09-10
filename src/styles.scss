@@ -61,3 +61,7 @@ body {
 .keen-slider:not([data-keen-slider-disabled])[data-keen-slider-v] {
   flex-wrap: wrap;
 }
+
+a {
+  text-decoration: none !important;
+}
