@@ -1,0 +1,25 @@
+.success-modal {
+  max-width: 560px;
+  padding: 20px 20px 34px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .mat-dialog-close {
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    app-text {
+      text-align: center;
+    }
+  }
+}

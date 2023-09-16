@@ -4,3 +4,9 @@ export interface UserReview {
   userPosition: string;
   reviewText: string;
 }
+
+export interface GetAccessData {
+  name: string;
+  email: string;
+  message?: string;
+}

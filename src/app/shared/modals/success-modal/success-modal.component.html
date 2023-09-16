@@ -1,0 +1,19 @@
+<div class="success-modal">
+  <div class="success-modal__header">
+    <mat-icon mat-dialog-close="cancel" class="mat-dialog-close"
+      >close</mat-icon
+    >
+  </div>
+  <div class="success-modal__body">
+    <app-img [img]="successModal.img"></app-img>
+    <app-text
+      [text]="successModal.title"
+      [textSize]="TextSizes.headline3"
+    ></app-text>
+    <app-text
+      [text]="successModal.text"
+      [textSize]="TextSizes.smallText"
+      [color]="ColorMap.grey"
+    ></app-text>
+  </div>
+</div>

@@ -2,6 +2,17 @@ import { Component } from '@angular/core';
 import { Buttons, ColorMap, TextSizes } from '../../enums';
 import { footerTexts } from '../../constants';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessModalComponent } from '../../modals/success-modal/success-modal.component';
+import { GetAccessService } from '../../services/get-access/get-access.service';
+import { tap } from 'rxjs';
+
+const DEFAULT_FORM_VALUES = {
+  name: null,
+  email: null,
+  message: null,
+  privacyPolicy: false,
+};
 
 @Component({
   selector: 'app-footer',
@@ -17,12 +28,31 @@ export class FooterComponent {
 
   public footerTexts = footerTexts;
 
-  public feedbackForm: FormGroup = this._fb.group({
+  public feedbackForm: FormGroup = this._formBuilder.group({
     name: [null, Validators.required],
     email: [null, Validators.required],
     message: [null],
     privacyPolicy: [false, Validators.requiredTrue],
   });
 
-  constructor(private _fb: FormBuilder) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _getAccessService: GetAccessService,
+    private _dialog: MatDialog
+  ) {}
+
+  public getAccess() {
+    if (this.feedbackForm.invalid) {
+      return;
+    }
+
+    const { name, email, message } = this.feedbackForm.value;
+
+    this._getAccessService
+      .getAccess({ name, email, message })
+      .pipe(tap(() => this._dialog.open(SuccessModalComponent)))
+      .subscribe(() => {
+        this.feedbackForm.patchValue(DEFAULT_FORM_VALUES);
+      });
+  }
 }

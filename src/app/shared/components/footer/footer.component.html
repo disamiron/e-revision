@@ -46,6 +46,7 @@
           ></app-text
         ></mat-checkbox>
         <app-button
+          (click)="getAccess()"
           [text]="footerTexts.getAccess"
           [size]="Buttons.average"
           [isDisabled]="feedbackForm.invalid"

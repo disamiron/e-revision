@@ -14,6 +14,7 @@ import { AdvantagesComponent } from './components/advantages/advantages.componen
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CircleButtonComponent } from './components/circle-button/circle-button.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
     ReviewsComponent,
     CircleButtonComponent,
     ReviewCardComponent,
+    SuccessModalComponent,
   ],
   imports: [CommonModule, MaterialModule],
   exports: [
