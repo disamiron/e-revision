@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SuccessModalComponent } from '../../modals/success-modal/success-modal.component';
 import { GetAccessService } from '../../services/get-access/get-access.service';
 import { tap } from 'rxjs';
+import { GetAccessData } from '../../interfaces';
 
 const DEFAULT_FORM_VALUES = {
   name: null,
@@ -46,7 +47,7 @@ export class FooterComponent {
       return;
     }
 
-    const { name, email, message } = this.feedbackForm.value;
+    const { name, email, message }: GetAccessData = this.feedbackForm.value;
 
     this._getAccessService
       .getAccess({ name, email, message })

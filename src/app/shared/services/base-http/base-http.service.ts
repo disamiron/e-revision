@@ -20,7 +20,7 @@ const DEFAULT_HEADERS = {
 export class BaseHttpService {
   private readonly _web = '/api/web';
 
-  private readonly _baseHref = `http://e-revision.ru${this._web}`;
+  private readonly _baseHref = `https://e-revision.ru${this._web}`;
 
   private _createDefaultHeaders(): HttpHeaders {
     const headers = new HttpHeaders(DEFAULT_HEADERS);
