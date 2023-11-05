@@ -8,7 +8,20 @@
       >
       </app-img>
     </div>
+    <div class="management">
+      <app-circle-button
+        [img]="'keyboard_arrow_left'"
+        [disabled]="currentSlide === 0"
+        (click)="slider?.prev()"
+      ></app-circle-button>
+      <app-circle-button
+        [img]="'keyboard_arrow_right'"
+        [disabled]="currentSlide === howItWorksArray.length - 1"
+        (click)="slider?.next()"
+      ></app-circle-button>
+    </div>
   </div>
+
   <div class="how-it-works__list">
     <app-text
       class="title"
