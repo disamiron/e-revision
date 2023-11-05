@@ -95,7 +95,11 @@
       margin-bottom: 40px;
 
       .management {
-        display: none;
+        top: 25%;
+        width: 90%;
+        gap: initial;
+        padding: 0 20px;
+        justify-content: space-between;
       }
     }
     &__list {
