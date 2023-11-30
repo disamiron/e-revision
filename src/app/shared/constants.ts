@@ -134,22 +134,22 @@ export const reviewsTexts = {
 export const userReviewsArray: UserReview[] = [
   {
     userLogo: 'assets/svg/user-logo_1.svg',
-    userName: 'Станислав Федоров',
-    userPosition: 'Владелец магазина Fix Price в г. Ярославль',
+    userName: 'Александр Максимов',
+    userPosition: 'Владелец магазина',
     reviewText:
       'Никогда не думал, что инвентаризация может быть такой легкой! С помощью этого приложения я смог провести ее в нашем магазине всего за несколько часов.',
   },
   {
     userLogo: 'assets/svg/user-logo_2.svg',
-    userName: 'Василий Иванов',
-    userPosition: 'Менеджер магазина Fix Price в г. Сыктывкар',
+    userName: 'Трофимов Ярослав',
+    userPosition: 'Менеджер магазина Fix Price',
     reviewText:
       'Я просто в восторге от этого приложения! Оно позволяет провести инвентаризацию магазина быстро и точно, что дает мне больше времени для других задач.',
   },
   {
     userLogo: 'assets/svg/user-logo_3.svg',
-    userName: 'Мария Кузнецова',
-    userPosition: 'Владелец магазина Fix Price в г. Архангельск',
+    userName: 'Лазарева Полина',
+    userPosition: 'Товаровед магазина Fix Price',
     reviewText:
       'Супер-удобное приложение! Оно существенно ускорило процесс инвентаризации и сделало его гораздо менее трудоемким. ',
   },
