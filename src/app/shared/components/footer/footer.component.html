@@ -26,7 +26,14 @@
             <input formControlName="name" matInput placeholder="Имя" />
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <input formControlName="email" matInput placeholder="Email" />
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Email"
+              type="email"
+              name="email"
+              [email]="true"
+            />
           </mat-form-field>
         </div>
         <mat-form-field appearance="outline" class="textarea">
