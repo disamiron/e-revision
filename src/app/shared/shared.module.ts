@@ -15,6 +15,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { CircleButtonComponent } from './components/circle-button/circle-button.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { SuccessModalComponent } from './modals/success-modal/success-modal.component';
+import { TranslocoRootModule } from '../transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { SuccessModalComponent } from './modals/success-modal/success-modal.comp
     ReviewCardComponent,
     SuccessModalComponent,
   ],
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, TranslocoRootModule],
   exports: [
     MaterialModule,
+    TranslocoRootModule,
     HeaderComponent,
     FooterComponent,
     MainComponent,

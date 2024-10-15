@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { successModal } from '../../constants';
+import { successModalImgSrc } from '../../constants';
 import { ColorMap, TextSizes } from '../../enums';
 
 @Component({
@@ -12,5 +12,5 @@ export class SuccessModalComponent {
 
   public ColorMap = ColorMap;
 
-  public successModal = successModal;
+  public successModalImgSrc = successModalImgSrc;
 }

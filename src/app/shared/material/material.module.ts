@@ -13,6 +13,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatSidenavModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatMenuModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -46,6 +48,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatSidenavModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatMenuModule,
   ],
   providers: [],
 })

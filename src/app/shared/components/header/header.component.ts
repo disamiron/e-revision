@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { headerLinks, logoImgSrc } from '../../constants';
+import { headerLinksCodes, logoImgSrc } from '../../constants';
 import { Buttons, ColorMap, TextSizes } from '../../enums';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { Buttons, ColorMap, TextSizes } from '../../enums';
 export class HeaderComponent {
   public logoImgSrc = logoImgSrc;
 
-  public headerLinks = headerLinks;
+  public headerLinksCodes = headerLinksCodes;
 
   public Buttons = Buttons;
 
@@ -19,4 +20,10 @@ export class HeaderComponent {
   public TextSizes = TextSizes;
 
   public ColorMap = ColorMap;
+
+  constructor(private translocoService: TranslocoService) {}
+
+  public setActiveLang(lang: string) {
+    this.translocoService.setActiveLang(lang);
+  }
 }

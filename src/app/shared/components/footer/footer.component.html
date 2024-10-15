@@ -1,93 +1,99 @@
-<div class="footer">
-  <div class="footer__main">
-    <div class="left-block">
-      <app-text
-        [text]="footerTexts.demoVersion"
-        [textSize]="TextSizes.caption"
-        [color]="ColorMap.white"
-        [opacity]="0.5"
-      ></app-text>
-      <app-text
-        [text]="footerTexts.tryOurProductToday"
-        [textSize]="TextSizes.headline2"
-        [color]="ColorMap.white"
-      ></app-text>
-      <app-text
-        [text]="footerTexts.fillOutTheContactForm"
-        [textSize]="TextSizes.smallText"
-        [color]="ColorMap.white"
-        [opacity]="0.6"
-      ></app-text>
-    </div>
-    <div class="right-block">
-      <form [formGroup]="feedbackForm" class="form">
-        <div class="main_values">
-          <mat-form-field appearance="outline">
-            <input formControlName="name" matInput placeholder="Имя" />
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <input
-              formControlName="email"
-              matInput
-              placeholder="Email"
-              type="email"
-              name="email"
-              [email]="true"
-            />
-          </mat-form-field>
-        </div>
-        <mat-form-field appearance="outline" class="textarea">
-          <textarea
-            formControlName="message"
-            matInput
-            placeholder="Сообщение (не обязательно)"
-          ></textarea>
-        </mat-form-field>
-        <mat-checkbox formControlName="privacyPolicy" color="primary"
-          ><app-text
-            [text]="footerTexts.privacyPolicy"
-            [textSize]="TextSizes.smallText"
-            [color]="ColorMap.white"
-            autocomplete="off"
-            [opacity]="0.6"
-          ></app-text
-        ></mat-checkbox>
-        <app-button
-          (click)="getAccess()"
-          [text]="footerTexts.getAccess"
-          [size]="Buttons.average"
-          [isDisabled]="feedbackForm.invalid"
-        ></app-button>
-      </form>
-    </div>
-  </div>
-  <div class="footer__extra">
-    <a [href]="'mailto:' + footerTexts.revisionMail" target="_blank">
-      <app-text
-        [text]="footerTexts.revisionMail"
-        [textSize]="TextSizes.menuItem"
-        [color]="ColorMap.white"
-        autocomplete="off"
-        [opacity]="0.6"
-      ></app-text
-    ></a>
-    <app-text
-      [text]="footerTexts.rights"
-      [textSize]="TextSizes.menuItem"
-      [color]="ColorMap.white"
-      autocomplete="off"
-      [opacity]="0.6"
-    ></app-text>
-    <div class="links">
-      <a href="https://t.me/nozikov" target="_blank">
+<ng-container *transloco="let translate"
+  ><div class="footer">
+    <div class="footer__main">
+      <div class="left-block">
         <app-text
-          [text]="'Telegram'"
+          [text]="translate('eRevisionModule.footer.head')"
+          [textSize]="TextSizes.caption"
+          [color]="ColorMap.white"
+          [opacity]="0.5"
+        ></app-text>
+        <app-text
+          [text]="translate('eRevisionModule.footer.title')"
+          [textSize]="TextSizes.headline2"
+          [color]="ColorMap.white"
+        ></app-text>
+        <app-text
+          [text]="translate('eRevisionModule.footer.subtitle')"
+          [textSize]="TextSizes.smallText"
+          [color]="ColorMap.white"
+          [opacity]="0.6"
+        ></app-text>
+      </div>
+      <div class="right-block">
+        <form [formGroup]="feedbackForm" class="form">
+          <div class="main_values">
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="name"
+                matInput
+                [placeholder]="translate('eRevisionModule.footer.form.name')"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="email"
+                matInput
+                [placeholder]="translate('eRevisionModule.footer.form.email')"
+                type="email"
+                name="email"
+                [email]="true"
+              />
+            </mat-form-field>
+          </div>
+          <mat-form-field appearance="outline" class="textarea">
+            <textarea
+              formControlName="message"
+              matInput
+              [placeholder]="translate('eRevisionModule.footer.form.message')"
+            ></textarea>
+          </mat-form-field>
+          <mat-checkbox formControlName="privacyPolicy" color="primary"
+            ><app-text
+              [text]="translate('eRevisionModule.footer.form.privacy')"
+              [textSize]="TextSizes.smallText"
+              [color]="ColorMap.white"
+              autocomplete="off"
+              [opacity]="0.6"
+            ></app-text
+          ></mat-checkbox>
+          <app-button
+            (click)="getAccess()"
+            [text]="translate('eRevisionModule.footer.form.confirm')"
+            [size]="Buttons.average"
+            [isDisabled]="feedbackForm.invalid"
+          ></app-button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__extra">
+      <a [href]="'mailto:' + revisionMail" target="_blank">
+        <app-text
+          [text]="revisionMail"
           [textSize]="TextSizes.menuItem"
           [color]="ColorMap.white"
           autocomplete="off"
           [opacity]="0.6"
         ></app-text
       ></a>
+      <app-text
+        [text]="translate('eRevisionModule.footer.rights')"
+        [textSize]="TextSizes.menuItem"
+        [color]="ColorMap.white"
+        autocomplete="off"
+        [opacity]="0.6"
+      ></app-text>
+      <div class="links">
+        <a href="https://t.me/nozikov" target="_blank">
+          <app-text
+            [text]="'Telegram'"
+            [textSize]="TextSizes.menuItem"
+            [color]="ColorMap.white"
+            autocomplete="off"
+            [opacity]="0.6"
+          ></app-text
+        ></a>
+      </div>
     </div>
   </div>
-</div>
+</ng-container>

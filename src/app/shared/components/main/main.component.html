@@ -1,35 +1,43 @@
-<div class="demo">
-  <div class="demo__text">
-    <app-text
-      [text]="mainTexts.demoText1"
-      [textSize]="TextSizes.headline1"
-    ></app-text>
-    <app-text
-      [text]="mainTexts.demoText2"
-      [textSize]="TextSizes.parapgraph"
-    ></app-text>
-    <a href="#demo">
-      <app-button
-        [text]="mainTexts.demoTextBtn"
-        [size]="Buttons.average"
-      ></app-button
-    ></a>
+<ng-container *transloco="let translate">
+  <div class="demo">
+    <div class="demo__text">
+      <app-text
+        [text]="translate('eRevisionModule.main.title')"
+        [textSize]="TextSizes.headline1"
+      ></app-text>
+      <app-text
+        [text]="translate('eRevisionModule.main.subtitle')"
+        [textSize]="TextSizes.parapgraph"
+      ></app-text>
+      <a href="#demo">
+        <app-button
+          [text]="translate('eRevisionModule.demoTextBtn')"
+          [size]="Buttons.average"
+        ></app-button
+      ></a>
+    </div>
+    <div class="demo__logo">
+      <app-img [img]="demoMobileImgSrc"></app-img>
+      <div class="background"></div>
+    </div>
   </div>
-  <div class="demo__logo">
-    <app-img [img]="demoMobileImgSrc"></app-img>
-    <div class="background"></div>
+  <div class="numbers">
+    <div *ngFor="let numberTextCode of numberTextsCodes" class="numbers__info">
+      <app-text
+        [text]="
+          translate('eRevisionModule.numbers.' + numberTextCode + '.title')
+        "
+        [textSize]="TextSizes.x100"
+        [color]="ColorMap.blue"
+      ></app-text>
+      <app-text
+        [text]="
+          translate(
+            'eRevisionModule.numbers.' + numberTextCode + '.description'
+          )
+        "
+        [textSize]="TextSizes.parapgraph"
+      ></app-text>
+    </div>
   </div>
-</div>
-<div class="numbers">
-  <div *ngFor="let numberText of numberTexts" class="numbers__info">
-    <app-text
-      [text]="numberText.num"
-      [textSize]="TextSizes.x100"
-      [color]="ColorMap.blue"
-    ></app-text>
-    <app-text
-      [text]="numberText.description"
-      [textSize]="TextSizes.parapgraph"
-    ></app-text>
-  </div>
-</div>
+</ng-container>

@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ColorMap, TextSizes } from '../../enums';
-import { reviewsTexts, userReviewsArray } from '../../constants';
+import { userReviewsImgArray } from '../../constants';
 import { UserReview } from '../../interfaces';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
@@ -25,13 +25,11 @@ export class ReviewsComponent implements AfterViewInit, OnDestroy {
 
   public slider: KeenSliderInstance | null = null;
 
-  public userReviewsArray: UserReview[] = userReviewsArray;
+  public userReviewsImgArray: string[] = userReviewsImgArray;
 
   public readonly TextSizes = TextSizes;
 
   public readonly ColorMap = ColorMap;
-
-  public reviewsTexts = reviewsTexts;
 
   public ngAfterViewInit() {
     if (this.sliderPreviewRef && this.sliderPreviewRef?.nativeElement) {

@@ -1,0 +1,93 @@
+{
+  "eRevisionModule": {
+    "demoTextBtn": "Demo Version",
+    "headerLinks": {
+      "about": "About the App",
+      "howItWorks": "How It Works",
+      "advantages": "Advantages",
+      "reviews": "Reviews"
+    },
+    "main": {
+      "title": "Speed Up and Simplify Inventory with E-Revision!",
+      "subtitle": "A New Approach to Inventory Management"
+    },
+    "numbers": {
+      "acceleration": {
+        "title": "x2",
+        "description": "Speeds up product inventory"
+      },
+      "reducesErrors": {
+        "title": "70%",
+        "description": "Reduces inventory errors"
+      },
+      "realTimeAccess": {
+        "title": "24/7",
+        "description": "Real-time data access"
+      }
+    },
+    "about": {
+      "title": "ABOUT THE APP",
+      "subtitle": "E-Revision is a mobile app designed for efficient and quick inventory management in stores and warehouses. It is perfect for entrepreneurs of all scales. The app provides reliable control and management of product stock, allowing you to focus on growing your business."
+    },
+    "howItWork": {
+      "title": "HOW IT WORKS",
+      "step1": "Select a store from the list of pre-registered stores for the inventory check",
+      "step2": "Upload a file with accounting stock data to compare with real data",
+      "step3": "Inventory products using your phone camera or manually input the barcode and local code",
+      "step4": "Enter the quantity of the scanned product",
+      "step5": "Search and filter scanned products for a quick assessment of current stock",
+      "step6": "Receive a file with the inventory results, ready for export to 1C for further data processing"
+    },
+    "advantages": {
+      "title": "Advantages",
+      "subtitle": "Why Our App is the Perfect Choice",
+      "reason1": "Speed and accuracy of inventory checks",
+      "reason2": "Ease of use and intuitive interface",
+      "reason3": "Flexible adaptation. We adapt E-Revision to any file format upon request",
+      "reason4": "Saves time and resources for entrepreneurs"
+    },
+    "tryItNow": {
+      "head": "Try It Now",
+      "title": "Experience the Benefits in Practice",
+      "subtitle": "Try our app’s demo version and see how easy and fast inventory management can be in your store"
+    },
+    "reviews": {
+      "title": "REVIEWS",
+      "subtitle": "What Customers Say About the Product",
+      "reviewers": {
+        "user1": {
+          "name": "Alexander Maksimov",
+          "position": "Store Owner",
+          "text": "I never thought inventory could be this easy! With this app, I managed to complete it in our store in just a few hours."
+        },
+        "user2": {
+          "name": "Yaroslav Trofimov",
+          "position": "Manager at Fix Price Store",
+          "text": "I am simply thrilled with this app! It allows me to conduct inventory checks quickly and accurately, giving me more time for other tasks."
+        },
+        "user3": {
+          "name": "Polina Lazareva",
+          "position": "Merchandiser at Fix Price Store",
+          "text": "Super convenient app! It significantly sped up the inventory process and made it much less labor-intensive."
+        }
+      }
+    },
+    "footer": {
+      "head": "Demo Version",
+      "title": "Try Our Product Today!",
+      "subtitle": "Fill out the contact form to get access to the demo version. Don’t miss the chance to improve your business!",
+      "rights": "© 2023 E-Revision. All rights reserved.",
+      "form": {
+        "name": "Name",
+        "email": "E-mail",
+        "message": "Message (optional)",
+        "privacy": "I agree to the privacy policy terms",
+        "confirm": "Get Access"
+      }
+    },
+    "getAccessModal": {
+      "title": "Thank You for Your Request!",
+      "subtitle": "We have received your request for the demo version of our product. Our manager will contact you shortly."
+    }
+  }
+}

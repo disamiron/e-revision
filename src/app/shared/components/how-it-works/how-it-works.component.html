@@ -2,9 +2,9 @@
   <div class="how-it-works__logo">
     <div class="keen-slider keen-slider--vertical custom" #sliderImgRef>
       <app-img
-        *ngFor="let howItWork of howItWorksArray; index as index"
+        *ngFor="let howItWorksImg of howItWorksImgArray; index as index"
         [class]="'keen-slider__slide img number-slide' + index"
-        [img]="howItWork.img"
+        [img]="howItWorksImg"
       >
       </app-img>
     </div>
@@ -16,38 +16,44 @@
       ></app-circle-button>
       <app-circle-button
         [img]="'keyboard_arrow_right'"
-        [disabled]="currentSlide === howItWorksArray.length - 1"
+        [disabled]="currentSlide === howItWorksImgArray.length - 1"
         (click)="slider?.next()"
       ></app-circle-button>
     </div>
   </div>
 
   <div class="how-it-works__list">
-    <app-text
-      class="title"
-      [text]="'КАК ЭТО РАБОТАЕТ'"
-      [color]="ColorMap.blue"
-      [textSize]="TextSizes.caption"
-    ></app-text>
+    <ng-container *transloco="let translate">
+      <app-text
+        class="title"
+        [text]="translate('eRevisionModule.howItWork.title')"
+        [color]="ColorMap.blue"
+        [textSize]="TextSizes.caption"
+      ></app-text>
 
-    <div class="container">
-      <ng-container
-        *ngFor="let howItWork of howItWorksArray; last as last; index as i"
-      >
-        <div class="item">
-          <div class="circle" [class.active]="currentSlide >= i"></div>
-          <div>
-            <app-text
-              [text]="howItWork.title"
-              [textSize]="TextSizes.smallText"
-              class="target"
-              (click)="slider?.moveToIdx(i)"
-            ></app-text>
-            <div class="separator" *ngIf="!last"></div>
+      <div class="container">
+        <ng-container
+          *ngFor="
+            let howItWorksImg of howItWorksImgArray;
+            last as last;
+            index as i
+          "
+        >
+          <div class="item">
+            <div class="circle" [class.active]="currentSlide >= i"></div>
+            <div>
+              <app-text
+                [text]="translate('eRevisionModule.howItWork.step' + (i + 1))"
+                [textSize]="TextSizes.smallText"
+                class="target"
+                (click)="slider?.moveToIdx(i)"
+              ></app-text>
+              <div class="separator" *ngIf="!last"></div>
+            </div>
           </div>
-        </div>
-      </ng-container>
-    </div>
+        </ng-container>
+      </div>
+    </ng-container>
   </div>
 </div>
 

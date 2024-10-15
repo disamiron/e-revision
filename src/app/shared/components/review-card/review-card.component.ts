@@ -8,7 +8,8 @@ import { ColorMap, TextSizes } from '../../enums';
   styleUrls: ['./review-card.component.scss'],
 })
 export class ReviewCardComponent {
-  @Input() userReview: UserReview | undefined;
+  @Input() userReviewImg: string | undefined;
+  @Input() index: number = 0;
 
   public TextSizes = TextSizes;
 

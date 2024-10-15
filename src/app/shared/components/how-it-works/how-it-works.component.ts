@@ -5,7 +5,7 @@ import {
   OnDestroy,
   ViewChild,
 } from '@angular/core';
-import { howItWorksArray } from '../../constants';
+import { howItWorksImgArray } from '../../constants';
 import { ColorMap, TextSizes } from '../../enums';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
@@ -27,8 +27,7 @@ export class HowItWorksComponent implements AfterViewInit, OnDestroy {
 
   public readonly ColorMap = ColorMap;
 
-  public readonly howItWorksArray: { img: string; title: string }[] =
-    howItWorksArray;
+  public readonly howItWorksImgArray: string[] = howItWorksImgArray;
 
   public ngAfterViewInit() {
     if (this.sliderImgRef && this.sliderImgRef?.nativeElement) {

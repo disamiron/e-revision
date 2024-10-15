@@ -1,43 +1,60 @@
-<div class="header">
-  <a href="#main"><app-img [img]="logoImgSrc"></app-img></a>
-  <div class="header__links">
-    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
-      <app-button [text]="link.text" [size]="Buttons.big"></app-button>
-    </a>
+<ng-container *transloco="let translate">
+  <div class="header">
+    <a href="#main"><app-img [img]="logoImgSrc"></app-img></a>
+    <div class="header__links">
+      <a *ngFor="let linkCode of headerLinksCodes" [href]="'#' + linkCode">
+        <app-button
+          [text]="translate('eRevisionModule.headerLinks.' + linkCode)"
+          [size]="Buttons.big"
+        ></app-button>
+      </a>
+    </div>
+    <div class="header__menu">
+      <a href="#demo" class="demo-button">
+        <app-button
+          [text]="translate('eRevisionModule.demoTextBtn')"
+          [size]="Buttons.average"
+        ></app-button>
+      </a>
+      <mat-icon [matMenuTriggerFor]="menu" class="lang-icon">language</mat-icon>
+      <app-circle-button
+        class="menu-button"
+        [img]="isMenuOpen ? 'close' : 'menu'"
+        [isMenuButton]="true"
+        (click)="drawer.toggle()"
+      ></app-circle-button>
+    </div>
   </div>
-  <div class="header__menu">
-    <a href="#demo" class="demo-button">
-      <app-button [text]="'Демо версия'" [size]="Buttons.average"></app-button>
-    </a>
-    <app-circle-button
-      class="menu-button"
-      [img]="isMenuOpen ? 'close' : 'menu'"
-      [isMenuButton]="true"
-      (click)="drawer.toggle()"
-    ></app-circle-button>
-  </div>
-</div>
 
-<mat-drawer #drawer class="drawer-sidenav" mode="side">
-  <div class="tablet-menu">
-    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
-      <app-text
-        [text]="link.text"
-        [textSize]="TextSizes.headline1"
-        (click)="drawer.toggle()"
-      ></app-text>
-    </a>
-  </div>
-  <div class="mobile-menu">
-    <a *ngFor="let link of headerLinks" [href]="'#' + link.code">
-      <app-text
-        [text]="link.text"
-        [textSize]="TextSizes.headline2"
-        (click)="drawer.toggle()"
-      ></app-text>
-    </a>
-    <a href="#demo" class="demo-button" (click)="drawer.toggle()">
-      <app-button [text]="'Демо версия'" [size]="Buttons.average"></app-button>
-    </a>
-  </div>
-</mat-drawer>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+    <div class="tablet-menu">
+      <a *ngFor="let linkCode of headerLinksCodes" [href]="'#' + linkCode">
+        <app-text
+          [text]="translate('eRevisionModule.headerLinks.' + linkCode)"
+          [textSize]="TextSizes.headline1"
+          (click)="drawer.toggle()"
+        ></app-text>
+      </a>
+    </div>
+    <div class="mobile-menu">
+      <a *ngFor="let linkCode of headerLinksCodes" [href]="'#' + linkCode">
+        <app-text
+          [text]="translate('eRevisionModule.headerLinks.' + linkCode)"
+          [textSize]="TextSizes.headline2"
+          (click)="drawer.toggle()"
+        ></app-text>
+      </a>
+      <a href="#demo" class="demo-button" (click)="drawer.toggle()">
+        <app-button
+          [text]="translate('eRevisionModule.demoTextBtn')"
+          [size]="Buttons.average"
+        ></app-button>
+      </a>
+    </div>
+  </mat-drawer>
+</ng-container>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="setActiveLang('en')">English</button>
+  <button mat-menu-item (click)="setActiveLang('ru')">Русский</button>
+</mat-menu>

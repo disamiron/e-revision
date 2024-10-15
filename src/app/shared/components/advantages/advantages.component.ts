@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { advantagesMobileImgSrc, advantagesTexts } from '../../constants';
+import { advantagesMobileImgSrc } from '../../constants';
 import { Buttons, ColorMap, TextSizes } from '../../enums';
 
 @Component({
@@ -13,8 +13,6 @@ export class AdvantagesComponent {
   public readonly ColorMap = ColorMap;
 
   public readonly Buttons = Buttons;
-
-  public advantagesTexts = advantagesTexts;
 
   public advantagesMobileImgSrc = advantagesMobileImgSrc;
 }

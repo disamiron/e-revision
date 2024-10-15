@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ColorMap, TextSizes } from '../../enums';
-import { mainTexts, whyTexts } from '../../constants';
+import { advantagesImgArray } from '../../constants';
 
 @Component({
   selector: 'app-why-our-app',
@@ -12,7 +12,5 @@ export class WhyOurAppComponent {
 
   public ColorMap = ColorMap;
 
-  public mainTexts = mainTexts;
-
-  public whyTexts = whyTexts;
+  public advantagesImgArray: string[] = advantagesImgArray;
 }

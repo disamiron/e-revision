@@ -1,22 +1,27 @@
-<div class="block">
-  <div class="why-block">
-    <app-text
-      [text]="mainTexts.advantages"
-      [textSize]="TextSizes.caption"
-      [color]="ColorMap.blue"
-    ></app-text>
-    <app-text
-      [text]="mainTexts.advantagesText"
-      [textSize]="TextSizes.bigText"
-    ></app-text>
-  </div>
-  <div class="why-cards">
-    <div *ngFor="let card of whyTexts" class="card">
-      <app-img [img]="card.img"></app-img>
+<ng-container *transloco="let translate">
+  <div class="block">
+    <div class="why-block">
       <app-text
-        [text]="card.description"
-        [textSize]="TextSizes.headline3"
+        [text]="translate('eRevisionModule.advantages.title')"
+        [textSize]="TextSizes.caption"
+        [color]="ColorMap.blue"
+      ></app-text>
+      <app-text
+        [text]="translate('eRevisionModule.advantages.subtitle')"
+        [textSize]="TextSizes.bigText"
       ></app-text>
     </div>
+    <div class="why-cards">
+      <div
+        *ngFor="let advantageImg of advantagesImgArray; index as i"
+        class="card"
+      >
+        <app-img [img]="advantageImg"></app-img>
+        <app-text
+          [text]="translate('eRevisionModule.advantages.reason' + (i + 1))"
+          [textSize]="TextSizes.headline3"
+        ></app-text>
+      </div>
+    </div>
   </div>
-</div>
+</ng-container>

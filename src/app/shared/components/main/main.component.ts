@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Buttons, ColorMap, TextSizes } from '../../enums';
-import { demoMobileImgSrc, mainTexts, numberTexts } from '../../constants';
+import { demoMobileImgSrc, numberTextsCodes } from '../../constants';
 
 @Component({
   selector: 'app-main',
@@ -14,9 +14,7 @@ export class MainComponent {
 
   public Buttons = Buttons;
 
-  public mainTexts = mainTexts;
-
-  public numberTexts = numberTexts;
+  public numberTextsCodes = numberTextsCodes;
 
   public demoMobileImgSrc = demoMobileImgSrc;
 }
